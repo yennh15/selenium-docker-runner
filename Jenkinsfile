@@ -21,6 +21,7 @@ pipeline{
             sh "docker-compose -f grid.yaml down"
             sh "docker-compose -f test-suite.yaml down"
             archiveArtifacts artifacts: 'output/flight-resvervation/emailable-report.html', followSymlinks: false
+        }
     }
 
 
