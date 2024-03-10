@@ -1,0 +1,14 @@
+version: "3"
+services:
+  flight-reservation:
+    image: yennguyen412/selenium
+    depends_on:
+      - chrome
+      - firefox
+    environment:
+      - HUB_HOST=hub
+      - ENV=qa
+      - THREAD_COUNT=3
+      - TEST_SUITE=flight-reservation.xml
+    volumes:
+      - ./output/flight-resvervation:/home/selenium-docker/test-output
