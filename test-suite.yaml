@@ -2,9 +2,6 @@ version: "3"
 services:
   flight-reservation:
     image: yennguyen412/selenium
-    depends_on:
-      - chrome
-      - firefox
     environment:
       - HUB_HOST=hub
       - ENV=qa
