@@ -11,7 +11,7 @@ pipeline{
 
         stage('Run Test'){
             steps{
-                sh "docker-compose -f test-suite.yaml up -d"
+                sh "docker-compose -f test-suite.yaml up --pull=always"
             }
         }
     }
